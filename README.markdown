@@ -7,3 +7,5 @@ License
 ------------------
 
 This site is licensed under a [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/). Feel free to copy/modify/make fun of any content or data on this site. I only ask that you attribute me when appropriate. I trust you.
+
+---------------------
