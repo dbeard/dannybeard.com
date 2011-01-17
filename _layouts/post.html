@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<article>
+	<h1 class="page-title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
+	<p class="post-date">{{ page.date | date_to_string }} &rarr; [<span class="categories">{{ page.categories | array_to_sentence_string }}</span>]</p>
+	{{ content }}
+</article>
+
+{% if site.related_posts | size %}
+	<div class="post-listing">
+		<p class="post-listing-title">Related</p>
+		<ul>
+			{% for post in site.related_posts %}
+		      <li><span>{{ post.date | date_to_string }}</span> &rarr; <a href="{{ post.url }}">{{ post.title }}</a></li>
+		    {% endfor %}
+		</ul>
+	</div>
+{% endif %}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'dannybeard'; // required: replace example with your forum shortname
+	var disqus_developer = 1; // developer mode is on
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    // var disqus_identifier = 'unique_dynamic_id_1234';
+    // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

@@ -1,0 +1,161 @@
+/* Color Scheme: http://colorschemedesigner.com/#2Z61Tw0w0w0w0 */
+/*reset*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+/*end reset*/
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Cardo', arial, serif;
+	background: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(white)); /* webkit */
+	background: -moz-linear-gradient(top, #e6e6e6, white); /* mozilla */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFe6e6e6, endColorstr=#FFFFFFFF); /* ie 6-7 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFe6e6e6, endColorstr=#FFFFFFFF)"; /* ie 8 */
+	height: 100%;
+	color: #444;
+	background-repeat: no-repeat;
+	margin: 0px;
+}
+
+a:link { color: #3CA0D0; text-decoration: none; }
+a:active { color: #086FA1; text-decoration: none; }
+a:visited { color: #086FA1; text-decoration: none; }
+a:hover { color: #7CE700; text-decoration: underline; }
+
+::selection { background:#7CE700; color:#000000; }
+::-moz-selection { background:#7CE700; color:#000000; }
+::-webkit-selection { background:#7CE700; color:#000000; }
+
+nav {
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+}
+
+nav li {
+	list-style: none;
+	float: left;
+	margin: 10px;
+}
+
+nav li a {
+	color: gray;
+	text-decoration: none;
+}
+
+#logo {
+	font-size: 2em;
+	color: #00B64F;
+}
+
+#content {
+	clear: both;
+	width: 700px;
+	padding-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 120%;
+}
+
+h1.page-title a{
+	font-size: 2em;
+	text-decoration: underline;
+	margin-bottom: 0px;
+	color: #444;
+}
+
+article .post-date {
+	font-size: 0.9em;
+	padding-bottom: 30px;
+}
+
+article .categories {
+	font-style: italic;
+}
+
+.post-listing {
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.post-listing-title {
+	font-size: 1.2em;
+}
+
+.post-listing ul {
+	list-style: none;
+	padding-top: 10px;
+}
+
+.post-listing li {
+	padding: 3px;
+}
+
+footer {
+	float:left;
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	padding-top: 50px;
+}
+
+footer ul {
+	float: left;
+	list-style: none;
+	padding: 0px;
+	position: relative;
+	left: 50%;
+	text-align: center;
+}
+footer ul li {
+	display: block;
+	float: left;
+	list-style: none;
+   	padding-left: 60px;
+	padding-right: 20px;
+	padding-top: 20px;
+	position: relative;
+	right: 50%;
+	height: 50px;
+	background-repeat: no-repeat;
+}
+
+footer br { clear: left; }
+
+footer ul.sub-footer li {
+	font-size: 0.8em;
+	padding: 0px 5px 0px 5px;
+}
+
+footer li.gmail{ background-image: url(../images/gmail.png); }
+footer li.twitter{ background-image: url(../images/twitter.png); }
+footer li.github{ background-image: url(../images/github.png); }

@@ -3,6 +3,20 @@ layout: default
 title: Danny Beard
 ---
 
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ipsum turpis, luctus in adipiscing sed, accumsan ut nibh. Nulla ut massa libero, vitae porttitor sapien. Suspendisse nec mauris dolor. Etiam tempus consectetur orci, ut pharetra sem euismod quis. Cras in metus arcu, a eleifend mi. Nullam placerat sollicitudin arcu, at accumsan nunc auctor quis. Sed tincidunt pharetra nisl, ut aliquam felis luctus vitae. Pellentesque tincidunt pulvinar lobortis. Praesent quis arcu augue. Donec euismod interdum nibh, sed vulputate nibh faucibus sed. Aliquam erat volutpat. Nam ut dui neque, sed scelerisque erat. Cras dictum nisi in diam lacinia placerat.
+{% assign recent_post = site.posts.first %}
+<article>
+	<h1 class="page-title"><a href="{{ recent_post.url }}">{{ recent_post.title }}</a></h1>
+	<p class="post-date">{{ recent_post.date | date_to_string }} &rarr; [<span class="categories">{{ recent_post.categories | array_to_sentence_string }}</span>]</p>
+	{{ recent_post.content }}
+</article>
+	
+<div class="post-listing">
+	<p class="post-listing-title">Recent Posts</p>
+	<ul>
+		{% for post in site.posts limit:5 %}
+			<li><span>{{ post.date | date_to_string }}</span> &rarr; <a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+	</ul>
+</div>
 
-	Nunc tincidunt lobortis turpis, sed consequat velit convallis at. Pellentesque et risus mauris, vitae sodales ante. Vivamus porta tempus dui, eu dictum nunc mattis in. Donec faucibus turpis vitae lorem convallis eget ultricies mauris vestibulum. Suspendisse fringilla placerat risus, at semper orci fringilla non. Fusce fermentum mauris id nulla dignissim tempor. Etiam porta congue ipsum vitae imperdiet. Mauris scelerisque dictum metus vel cursus. Nulla metus orci, scelerisque at condimentum sed, pulvinar vitae nunc. In volutpat scelerisque fermentum. Morbi ultrices tincidunt risus, vel tempor dui congue ac. Proin et tortor vel enim ullamcorper mollis. Cras semper libero in ante egestas sit amet accumsan odio mollis. Nullam mollis consectetur diam, sit amet faucibus ligula tempus ac.
+	

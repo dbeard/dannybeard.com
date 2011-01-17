@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting up apache, tomcat and railo
-published: false
+published: true
 categories: [coldfusion,railo]
 ---
 
@@ -13,10 +13,19 @@ Due to some limitations I've recently encountered with Adobe's Coldfusion server
 
 Railo offers several options for installing and running the server:
 
-   * Railo Server with Tomcat
-   * Railo Express with Jetty
-   * Railo Custom
+ * Railo Server with Tomcat
+ * Railo Express with Jetty
+ * Railo Custom
 
 The [Tomcat][tomcat] package is meant for production use, the express edition for testing/development, and the custom package for unique setups (Different application server, etc). The custom package is either WAR file that can be deployed on your application server, or as Jar files that can be included in your lib folder.
 
 Getting the express install working was effortless. I literally had a functioning cfml server up in running in minutes.
+
+{% highlight cfm %}
+<cfif (
+isStruct( someValue ) &&
+!isNull( someValue.someKey )
+)>
+ 
+</cfif>
+{% endhighlight %}
