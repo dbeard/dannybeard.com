@@ -1,0 +1,26 @@
+task :deploy do
+  require 'rubygems'
+  require 'highline/import'
+  require 'net/ssh'
+
+  branch = "master"
+
+  username = ask("Username:  ") { |q| q.echo = true }
+  password = ask("Password:  ") { |q| q.echo = "*" }
+
+  Net::SSH.start('dannybeard.com', username, :port => 22, :password => password) do |ssh|
+    commands = <<EOF
+cd ~/www/dannybeard.com/_source/dannybeard.com/
+git checkout #{branch}
+git pull origin #{branch}
+git checkout -f
+rm -rf _site
+jekyll --no-auto
+rm -rf ../../_previous
+mv ../../public_html ../../_previous
+mv _site ../../public_html
+EOF
+    commands = commands.gsub(/\n/, "; ")
+    ssh.exec commands
+  end
+end

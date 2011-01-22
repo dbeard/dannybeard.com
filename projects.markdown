@@ -4,4 +4,4 @@ title: Projects
 published: true
 ---
 
-Projects page here
+I'll slowly be moving the various projects I have or currently work on here.
