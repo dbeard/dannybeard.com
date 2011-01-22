@@ -15,7 +15,7 @@ git checkout #{branch}
 git pull origin #{branch}
 git checkout -f
 rm -rf _site
-jekyll --no-auto
+/var/lib/gems/1.8/bin/jekyll --no-auto
 rm -rf ../../_previous
 mv ../../public_html ../../_previous
 mv _site ../../public_html
