@@ -3,11 +3,11 @@ layout: default
 title: Danny Beard
 ---
 
-{% assign recent_post = site.posts.first %}
+{% assign page = site.posts.first %}
 <article>
-	<h1 class="page-title"><a href="{{ recent_post.url }}">{{ recent_post.title }}</a></h1>
-	<p class="post-date">{{ recent_post.date | date_to_string }} &rarr; [<span class="categories">{{ recent_post.categories | array_to_sentence_string }}</span>]</p>
-	{{ recent_post.content }}
+	<h1 class="page-title"><a href="{{ recent_post.url }}">{{ page.title }}</a></h1>
+	<p class="post-date">{{ page.date | date_to_string }} &rarr; [<span class="categories">{{ page.categories | array_to_sentence_string }}</span>]</p>
+	{{ page.content }}
 </article>
 <br/>	
 <div class="post-listing">
@@ -18,5 +18,9 @@ title: Danny Beard
 		{% endfor %}
 	</ul>
 </div>
+
+{% unless page.comments == false %}
+	{% include disqus.html %}
+{% endunless %}
 
 	

@@ -4,7 +4,7 @@ title: Why Am I Doing This?
 published: true
 categories: [opinion]
 uniqueid: whyamidoingthis
-comments: true
+comments: false
 ---
 
 Hey look at this - I've restructed my site once again! A little history - I've always wanted to start a blog, but kept running into different obstacles that kept me from starting it.
